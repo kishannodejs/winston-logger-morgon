@@ -1,5 +1,5 @@
 const express = require('express');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const winston = require('./config/winston');
 
 const app = express();
@@ -12,7 +12,7 @@ app.use(express.json());
 // 2.application- date.log with date wise logs of application
 
 // streamed with ist and utc
-app.use(morgan('combined', { stream: winston.stream }));
+// app.use(morgan('combined', { stream: winston.stream }));
 
 // Default Routes
 app.get('/', (req, res) => {
